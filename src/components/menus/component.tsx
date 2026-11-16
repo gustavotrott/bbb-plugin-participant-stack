@@ -144,17 +144,23 @@ interface UserListMenuProps {
   onDone: () => void;
 }
 
+// A menu is a glance, not the user list: in a large meeting it names this many
+// users at most and closes with the count of the others
+const MAX_LISTED = 30;
+
 export function UserListMenu({
   title, users, viewer, intl, actions, footer = undefined, more = 0, onDone,
 }: UserListMenuProps) {
   const mod = viewer.isModerator;
+  const listed = users.slice(0, MAX_LISTED);
+  const notListed = more + users.length - listed.length;
   return (
     <>
       <PopoverHeader>
         <PopoverTitle>{title}</PopoverTitle>
       </PopoverHeader>
       <UserRows>
-        {users.map((user) => (
+        {listed.map((user) => (
           <UserRow key={user.userId} title={statusOf(user, viewer, intl)}>
             <UserRowAvatar>
               <Avatar user={user} small />
@@ -173,7 +179,7 @@ export function UserListMenu({
             )}
           </UserRow>
         ))}
-        {more > 0 && <MoreUsers>{`+${more}`}</MoreUsers>}
+        {notListed > 0 && <MoreUsers>{`+${notListed}`}</MoreUsers>}
       </UserRows>
       {mod && footer === 'lowerAllHands' && users.length > 1 && (
         <MenuFooter>

@@ -43,7 +43,7 @@ By default the stack is shown to moderators and the presenter. See [`visibleTo`]
 
 ![Five users clapping, as one item](docs/reactions.png)
 
-**See who else is there.** `+N` stands for the users that did not fit. Its menu lists them.
+**See who else is there.** `+N` stands for the users that did not fit. Its menu names the first of them, 30 at most and only those on the first page of the user list, and closes with a `+X` for the others, so it stays light in a large meeting.
 
 ![The users that did not fit](docs/more.png)
 
@@ -201,7 +201,7 @@ work, but stop being shared.
 Consequences worth knowing:
 
 - Users beyond the first page are known only by their number, unless they raise a hand or react. The `+N`
-  menu lists the ones it knows and closes with the count of the others.
+  menu lists up to 30 of the ones it knows and closes with the count of the others.
 - A reaction made more than 15 seconds before a user joined is not shown to that user.
 - Nothing is subscribed to for users who do not see the stack (`visibleTo`, or hidden by the user).
 
