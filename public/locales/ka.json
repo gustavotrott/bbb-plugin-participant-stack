@@ -1,0 +1,17 @@
+{
+  "participantStack.stack.label": "მომხმარებლების სია",
+  "participantStack.status.presenter": "მომხსენებელი",
+  "participantStack.status.moderator": "მოდერატორი",
+  "participantStack.status.you": "შენ",
+  "participantStack.status.locked": "ჩაკეტილია",
+  "participantStack.action.unlockUser": "განბლოკე {userName}",
+  "participantStack.action.lockUser": "დაბლოკე {userName}",
+  "participantStack.action.makePresenter": "გახადე წამყვანად ",
+  "participantStack.action.promote": "მოდერატორის უფლებების მინიჭება",
+  "participantStack.action.demote": "მნახველის უფლებების მინიჭება",
+  "participantStack.waiting.title": "მომხმარებლების ლოდინი",
+  "participantStack.waiting.accept": "თანხმობა",
+  "participantStack.waiting.deny": "უარყოფა",
+  "participantStack.waiting.allowEveryone": "ყველას დართეთ ნება",
+  "participantStack.waiting.denyEveryone": "ყველა აკრძალე"
+}

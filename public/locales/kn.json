@@ -1,0 +1,14 @@
+{
+  "participantStack.stack.label": "ಬಳಕೆದಾರರ ಪಟ್ಟಿ",
+  "participantStack.status.presenter": "ಪ್ರಸ್ತುತ ಪಡಿಸುವವ",
+  "participantStack.status.you": "ನೀವು",
+  "participantStack.status.locked": "ಲಾಕ್ ಮಾಡಲಾಗಿದೆ",
+  "participantStack.action.unlockUser": "ಅನ್ಲಾಕ್ ಮಾಡಿ {userName}",
+  "participantStack.action.lockUser": "{userName} ಲಾಕ್ ಮಾಡಿ",
+  "participantStack.action.makePresenter": "ಪ್ರಸ್ತುತಪಡುವವರಾಗಿ ಮಾಡಿ",
+  "participantStack.action.promote": "ಮಾಡರೇಟರ್‌ಗೆ ಮುಂಬಡ್ತಿ ನೀಡಿ",
+  "participantStack.action.demote": "ವೀಕ್ಷಕರಾಗಿ ಹಿಂಬಡ್ತಿ ನೀಡಿ",
+  "participantStack.waiting.title": "ಕಾಯುತ್ತಿರುವ ಬಳಕೆದಾರರು",
+  "participantStack.waiting.allowEveryone": "ಎಲ್ಲರಿಗೂ ಅನುಮತಿಸಿ",
+  "participantStack.waiting.denyEveryone": "ಎಲ್ಲರನ್ನು ನಿರಾಕರಿಸು"
+}

@@ -1,0 +1,18 @@
+{
+  "participantStack.stack.label": "Zoznam užívateľov",
+  "participantStack.status.presenter": "Prednášajúci",
+  "participantStack.status.moderator": "Moderátor",
+  "participantStack.status.you": "Vy",
+  "participantStack.status.locked": "Zamknutý",
+  "participantStack.action.lowerAllHands": "Zrušiť hlásenie sa",
+  "participantStack.action.unlockUser": "Odomknúť {userName}",
+  "participantStack.action.lockUser": "Zamknúť {userName}",
+  "participantStack.action.makePresenter": "Učiniť prednášajúcim",
+  "participantStack.action.promote": "Povýšiť na moderátora",
+  "participantStack.action.demote": "Degradovať na poslucháča",
+  "participantStack.waiting.title": "Čakajúci užívatelia",
+  "participantStack.waiting.accept": "Povoliť",
+  "participantStack.waiting.deny": "Zakázať",
+  "participantStack.waiting.allowEveryone": "Povoliť všetkých",
+  "participantStack.waiting.denyEveryone": "Zakázať všetkých"
+}

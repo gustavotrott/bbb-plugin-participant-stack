@@ -1,0 +1,14 @@
+{
+  "participantStack.stack.label": "उपयोगकर्ता सूची",
+  "participantStack.status.presenter": "प्रस्तुतकर्ता",
+  "participantStack.status.you": "आप",
+  "participantStack.status.locked": "बंद",
+  "participantStack.action.unlockUser": "{userName} अनलॉक करें",
+  "participantStack.action.lockUser": "लॉक {userName}",
+  "participantStack.action.makePresenter": "प्रस्तोता बनाओ",
+  "participantStack.action.promote": "मॉडरेटर को बढ़ावा दें",
+  "participantStack.action.demote": "दर्शक को समर्पित करें",
+  "participantStack.waiting.title": "प्रतीक्षारत उपयोगकर्ता",
+  "participantStack.waiting.allowEveryone": "सभी को अनुमति दें",
+  "participantStack.waiting.denyEveryone": "सबको नकार दो"
+}

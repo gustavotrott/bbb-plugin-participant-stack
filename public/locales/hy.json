@@ -1,0 +1,21 @@
+{
+  "participantStack.stack.label": "Օգտվողների ցուցակը",
+  "participantStack.status.presenter": "Ներկայացնող",
+  "participantStack.status.moderator": "Մոդերատոր",
+  "participantStack.status.you": "Դուք",
+  "participantStack.status.locked": "Արգելափակված է",
+  "participantStack.action.lowerHand": "Իջեցնել {userName}ի ձեռքը։",
+  "participantStack.action.lowerAllHands": "Իջեցնել ձեռքերը",
+  "participantStack.action.clearReactions": "Մաքրել բոլոր արձագանքները",
+  "participantStack.action.unlockUser": "Ապաարգելափակել {userName}",
+  "participantStack.action.lockUser": "Արգելափակել {userName}",
+  "participantStack.action.makePresenter": "Դարձնել ներկայացնող",
+  "participantStack.action.promote": "Դարձնել մոդերատոր",
+  "participantStack.action.demote": "Դարձնել հասարակ մասնակից",
+  "participantStack.waiting.title": "Սպասում ենք մասնակիցների",
+  "participantStack.waiting.accept": "Ընդունել",
+  "participantStack.waiting.deny": "Մերժել",
+  "participantStack.waiting.allowEveryone": "Թույլատրել բոլորին",
+  "participantStack.waiting.denyEveryone": "Մերժել բոլորին",
+  "participantStack.preferences.options": "Հատկություններ"
+}

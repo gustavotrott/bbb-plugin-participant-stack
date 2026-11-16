@@ -1,0 +1,16 @@
+{
+  "participantStack.stack.label": "İstifadəçi siyahısı",
+  "participantStack.status.presenter": "Təqdimatçı",
+  "participantStack.status.locked": "Kilidli",
+  "participantStack.action.lowerAllHands": "Əlləri aşağı sal",
+  "participantStack.action.unlockUser": "Kilidi aç: {userName}",
+  "participantStack.action.lockUser": "Kilidlə: {userName}",
+  "participantStack.action.makePresenter": "Təqdimatçı et",
+  "participantStack.action.promote": "Moderatora yüksəldin",
+  "participantStack.action.demote": "İzləyici et",
+  "participantStack.waiting.title": "İstidaçilər gözlənilir",
+  "participantStack.waiting.accept": "Qəbul et",
+  "participantStack.waiting.deny": "Qəbul etmə",
+  "participantStack.waiting.allowEveryone": "Hamıya icazə ver",
+  "participantStack.waiting.denyEveryone": "Heç kimə icazə vermə"
+}

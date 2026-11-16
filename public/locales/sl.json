@@ -1,0 +1,17 @@
+{
+  "participantStack.stack.label": "Seznam uporabnikov",
+  "participantStack.status.presenter": "Govornik",
+  "participantStack.status.you": "Jaz",
+  "participantStack.status.locked": "Zaklenjeno",
+  "participantStack.action.lowerAllHands": "Spusti roke",
+  "participantStack.action.unlockUser": "Odkleni {userName}",
+  "participantStack.action.lockUser": "Zakleni {userName}",
+  "participantStack.action.makePresenter": "Določi za govornika",
+  "participantStack.action.promote": "Povišaj v moderatorja",
+  "participantStack.action.demote": "Znižaj v opazovalca",
+  "participantStack.waiting.title": "Čakanje udeležencev",
+  "participantStack.waiting.accept": "Sprejmi",
+  "participantStack.waiting.deny": "Zavrni",
+  "participantStack.waiting.allowEveryone": "Dovoli vse",
+  "participantStack.waiting.denyEveryone": "Zavrni vse"
+}

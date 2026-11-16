@@ -1,0 +1,23 @@
+{
+  "participantStack.stack.label": "Listë përdoruesish",
+  "participantStack.status.raisedHand": "Duar të Ngritura",
+  "participantStack.status.presenter": "Paraqitës",
+  "participantStack.status.you": "Ju",
+  "participantStack.status.locked": "Kyçur",
+  "participantStack.hands.title": "Duar të Ngritura",
+  "participantStack.action.lowerHand": "Ulni dorën",
+  "participantStack.action.lowerAllHands": "Ulini krejt duart",
+  "participantStack.action.removeReaction": "Hiqe reagimin",
+  "participantStack.action.clearReactions": "Spastro krejt reagimet",
+  "participantStack.action.unlockUser": "Shkyçe {userName}",
+  "participantStack.action.lockUser": "Kyçe {userName}",
+  "participantStack.action.makePresenter": "Bëje paraqitës",
+  "participantStack.action.promote": "Ngrijeni në rang moderatori",
+  "participantStack.action.demote": "Uljani rangun në parës",
+  "participantStack.waiting.title": "Përdorues Në Pritje",
+  "participantStack.waiting.accept": "Pranojeni",
+  "participantStack.waiting.deny": "Hidhe poshtë",
+  "participantStack.waiting.allowEveryone": "Lejo gjithkënd",
+  "participantStack.waiting.denyEveryone": "Hidh poshtë gjithkënd",
+  "participantStack.preferences.options": "Mundësi"
+}

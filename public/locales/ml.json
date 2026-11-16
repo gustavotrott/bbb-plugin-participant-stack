@@ -1,0 +1,18 @@
+{
+  "participantStack.stack.label": "ഉപയോക്തൃ പട്ടിക",
+  "participantStack.status.presenter": "അവതാരകൻ",
+  "participantStack.status.moderator": "മോഡറേറ്റർ",
+  "participantStack.status.you": "നിങ്ങൾ",
+  "participantStack.status.locked": "ലോക്കുചെയ്‌തു",
+  "participantStack.action.lowerAllHands": "താഴ്ന്ന കൈകൾ",
+  "participantStack.action.unlockUser": "അൺലോക്കുചെയ്യുക {userName}",
+  "participantStack.action.lockUser": "Lock 0} ലോക്കുചെയ്യുക",
+  "participantStack.action.makePresenter": "അവതാരകനാക്കുക",
+  "participantStack.action.promote": "മോഡറേറ്ററായി പ്രമോട്ടുചെയ്യുക",
+  "participantStack.action.demote": "കാഴ്ചക്കാരന് ഡെമോട്ട് ചെയ്യുക",
+  "participantStack.waiting.title": "ഉപയോക്താക്കളെ കാത്തിരിക്കുന്നു",
+  "participantStack.waiting.accept": "അംഗീകരിക്കുക",
+  "participantStack.waiting.deny": "നിരസിക്കുക",
+  "participantStack.waiting.allowEveryone": "എല്ലാവരേയും അനുവദിക്കുക",
+  "participantStack.waiting.denyEveryone": "എല്ലാവരേയും നിഷേധിക്കുക"
+}

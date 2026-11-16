@@ -1,0 +1,18 @@
+{
+  "participantStack.stack.label": "பயனர் பட்டியல்",
+  "participantStack.status.presenter": "தொகுப்பாளர்",
+  "participantStack.status.moderator": "மதிப்பீட்டாளர்",
+  "participantStack.status.you": "நீங்கள்",
+  "participantStack.status.locked": "பூட்டப்பட்டுள்ளது",
+  "participantStack.action.lowerAllHands": "கீழ் கைகள்",
+  "participantStack.action.unlockUser": "திறத்தல் {userName}",
+  "participantStack.action.lockUser": "பூட்டு {userName}",
+  "participantStack.action.makePresenter": "தொகுப்பாளராக ஆக்குங்கள்",
+  "participantStack.action.promote": "மதிப்பீட்டாளராக பதவி உயர்வு",
+  "participantStack.action.demote": "பார்வையாளருக்கு குறைவு",
+  "participantStack.waiting.title": "காத்திருக்கும் பயனர்கள்",
+  "participantStack.waiting.accept": "ஏற்றுக்கொள்",
+  "participantStack.waiting.deny": "மறுக்க",
+  "participantStack.waiting.allowEveryone": "அனைவரையும் அனுமதிக்கவும்",
+  "participantStack.waiting.denyEveryone": "அனைவரையும் மறுக்கவும்"
+}

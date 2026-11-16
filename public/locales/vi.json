@@ -1,0 +1,22 @@
+{
+  "participantStack.stack.label": "Hoạt động của người tham gia",
+  "participantStack.status.raisedHand": "Giơ tay",
+  "participantStack.preferences.hide": "Ẩn hoạt động của người tham gia",
+  "participantStack.preferences.show": "Hiện hoạt động của người tham gia",
+  "participantStack.preferences.position": "Vị trí",
+  "participantStack.position.navbarLeft": "Thanh trên cùng",
+  "participantStack.position.navbarCenter": "Thay cho tiêu đề cuộc họp",
+  "participantStack.position.actionsBarLeft": "Thanh dưới cùng",
+  "participantStack.position.mediaTopLeft": "Góc trên bên trái nội dung",
+  "participantStack.position.mediaTopCenter": "Phía trên nội dung",
+  "participantStack.position.mediaLeft": "Bên cạnh nội dung",
+  "participantStack.position.floating": "Nổi (kéo để di chuyển)",
+  "participantStack.status.presenter": "Trình chiếu",
+  "participantStack.status.you": "Bạn",
+  "participantStack.status.locked": "Đang khóa",
+  "participantStack.action.unlockUser": "Mở khóa {userName}",
+  "participantStack.action.lockUser": "Khóa {userName}",
+  "participantStack.action.makePresenter": "Tạo trình chiếu",
+  "participantStack.action.promote": "Bổ nhiệm là quản trị",
+  "participantStack.action.demote": "Hạ cấp người xem"
+}

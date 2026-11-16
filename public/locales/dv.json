@@ -1,0 +1,18 @@
+{
+  "participantStack.stack.label": "ޔޫސަރ ލިސްޓް",
+  "participantStack.status.presenter": "ހުށައެޅުންތެރިޔާ",
+  "participantStack.status.moderator": "މޮޑަރޭޓަރ",
+  "participantStack.status.you": "ތިޔަބޭފުޅާ",
+  "participantStack.status.locked": "ތަޅުލެވިފައި",
+  "participantStack.action.lowerAllHands": "އަތްތައް ތިރިކޮށްލުމަށް",
+  "participantStack.action.unlockUser": "ތަޅުހުޅުވާ {userName}",
+  "participantStack.action.lockUser": "ތަޅުލާ {userName}",
+  "participantStack.action.makePresenter": "ހުށައެޅުންތެރިއަކަށް ހަދާ",
+  "participantStack.action.promote": "މޮޑެރޭޓަރަކަށް ޕްރޮމޯޓުކުރޭ",
+  "participantStack.action.demote": "ބެލުންތެރިއަކަށް ޑިމޯޓްކުރޭ",
+  "participantStack.waiting.title": "މަޑުކޮށްގެން ތިބި ޔޫސަރ އިން",
+  "participantStack.waiting.accept": "ގަބޫލްކުރޭ",
+  "participantStack.waiting.deny": "އިންކާރު ކުރޭ",
+  "participantStack.waiting.allowEveryone": "އެންމެނަށް ހުޅުވާލައި",
+  "participantStack.waiting.denyEveryone": "އެންމެނަށް ބަންދު ކުރޭ"
+}

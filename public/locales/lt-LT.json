@@ -1,0 +1,18 @@
+{
+  "participantStack.stack.label": "Vartotojų sąrašas",
+  "participantStack.status.presenter": "Vedėjas",
+  "participantStack.status.moderator": "Moderatorius",
+  "participantStack.status.you": "Jūs",
+  "participantStack.status.locked": "Užrakinta",
+  "participantStack.action.lowerAllHands": "Nuleistos rankos",
+  "participantStack.action.unlockUser": "Atrakinti {userName}",
+  "participantStack.action.lockUser": "Užrakinti {userName}",
+  "participantStack.action.makePresenter": "Padaryti pranešėju",
+  "participantStack.action.promote": "Paaukštinti iki moderatoriaus",
+  "participantStack.action.demote": "Nužeminti iki žiūrovo",
+  "participantStack.waiting.title": "Laukiama naudotojų",
+  "participantStack.waiting.accept": "Priimti",
+  "participantStack.waiting.deny": "Atmesti",
+  "participantStack.waiting.allowEveryone": "Leisti visus",
+  "participantStack.waiting.denyEveryone": "Atmesti visus"
+}

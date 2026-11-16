@@ -1,0 +1,14 @@
+{
+  "participantStack.stack.label": "Списък на потребителите",
+  "participantStack.status.presenter": "Лектор",
+  "participantStack.status.you": "Вие",
+  "participantStack.status.locked": "Заключено",
+  "participantStack.action.unlockUser": "Отключване {userName}",
+  "participantStack.action.lockUser": "Заключване {userName}",
+  "participantStack.action.makePresenter": "Направи презентатор",
+  "participantStack.action.promote": "Повиши до модератор",
+  "participantStack.action.demote": "Понижи до участник",
+  "participantStack.waiting.title": "Изчаква потребители",
+  "participantStack.waiting.allowEveryone": "Разреши всички",
+  "participantStack.waiting.denyEveryone": "Забрани всички"
+}

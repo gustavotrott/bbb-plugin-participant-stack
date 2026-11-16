@@ -1,0 +1,11 @@
+{
+  "participantStack.stack.label": "Lista utilizaires",
+  "participantStack.status.presenter": "Presentator",
+  "participantStack.status.you": "Vos",
+  "participantStack.status.locked": "Verrolhat",
+  "participantStack.action.unlockUser": "Desbarrar {userName}",
+  "participantStack.action.lockUser": "Barrar {userName}",
+  "participantStack.action.makePresenter": "Far venir presentator",
+  "participantStack.waiting.accept": "Acceptar",
+  "participantStack.waiting.deny": "Refusar"
+}

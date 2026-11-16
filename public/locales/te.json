@@ -1,0 +1,18 @@
+{
+  "participantStack.stack.label": "వినియోగదారుని జాబితా",
+  "participantStack.status.presenter": "ప్రెజెంటర్",
+  "participantStack.status.moderator": "మోడరేటర్",
+  "participantStack.status.you": "మీరు",
+  "participantStack.status.locked": "లాక్ చేయబడింది",
+  "participantStack.action.lowerAllHands": "చేతులను కిందకి దించారు",
+  "participantStack.action.unlockUser": "అన్ లాక్ {userName}",
+  "participantStack.action.lockUser": "లాక్{userName}",
+  "participantStack.action.makePresenter": "ప్రెజెంటర్ చేయండి",
+  "participantStack.action.promote": "మోడరేటర్‌గా చేయి",
+  "participantStack.action.demote": "వీక్షకుడిగా మార్చుము",
+  "participantStack.waiting.title": "వినియోగదారులు వేచి ఉన్నారు",
+  "participantStack.waiting.accept": "అంగీకరించు",
+  "participantStack.waiting.deny": "తిరస్కరించు",
+  "participantStack.waiting.allowEveryone": "అందరినీ అనుమతించండి",
+  "participantStack.waiting.denyEveryone": "ప్రతి ఒక్కరినీ తిరస్కరించండి"
+}

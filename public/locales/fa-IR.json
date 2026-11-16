@@ -1,0 +1,22 @@
+{
+  "participantStack.stack.label": "فهرست کاربر",
+  "participantStack.status.presenter": "ارائه‌دهنده",
+  "participantStack.status.moderator": "مدیر",
+  "participantStack.status.you": "شما",
+  "participantStack.status.locked": "قفل شده",
+  "participantStack.action.lowerHand": "پایین آوردن دست {userName}",
+  "participantStack.action.lowerAllHands": "پایین آوردن دست‌ها",
+  "participantStack.action.removeReaction": "حذف واکنش",
+  "participantStack.action.clearReactions": "پاک‌کردن همهٔ واکنش‌ها",
+  "participantStack.action.unlockUser": "بازکردن {userName}",
+  "participantStack.action.lockUser": "قفل‌کردن {userName}",
+  "participantStack.action.makePresenter": "تغییر نقش به ارائه‌دهنده",
+  "participantStack.action.promote": "ارتقای نقش به مدیر",
+  "participantStack.action.demote": "تبدیل به کاربر عادی",
+  "participantStack.waiting.title": "کاربران درحال انتظار",
+  "participantStack.waiting.accept": "پذیرفتن",
+  "participantStack.waiting.deny": "ردکردن",
+  "participantStack.waiting.allowEveryone": "اجازهٔ ورود به همه",
+  "participantStack.waiting.denyEveryone": "رد همه",
+  "participantStack.preferences.options": "ویژگی‌ها"
+}

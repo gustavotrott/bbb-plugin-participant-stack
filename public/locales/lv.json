@@ -1,0 +1,14 @@
+{
+  "participantStack.stack.label": "Dalībnieku saraksts",
+  "participantStack.status.presenter": "Ziņotājs",
+  "participantStack.status.you": "Jūs",
+  "participantStack.status.locked": "Slēgts/bloķēts",
+  "participantStack.action.unlockUser": "Atslēgt/atbloķēt {userName}",
+  "participantStack.action.lockUser": "Slēgt/bloķēt {userName}",
+  "participantStack.action.makePresenter": "Padarīt par ziņotāju",
+  "participantStack.action.promote": "Padarīt par moderatoru",
+  "participantStack.action.demote": "Padarīt par vērotāju",
+  "participantStack.waiting.title": "Gaidām daībniekus",
+  "participantStack.waiting.allowEveryone": "Ļaut ikvienam",
+  "participantStack.waiting.denyEveryone": "Liegt ikvienam"
+}

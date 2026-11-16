@@ -1,0 +1,17 @@
+{
+  "participantStack.stack.label": "Gebruikerslys",
+  "participantStack.status.presenter": "Aanbieder",
+  "participantStack.status.you": "Jy",
+  "participantStack.status.locked": "Gesluit",
+  "participantStack.action.lowerAllHands": "Laat sak hande",
+  "participantStack.action.unlockUser": "Ontsluit {userName}",
+  "participantStack.action.lockUser": "Sluit {userName}",
+  "participantStack.action.makePresenter": "Maak aanbieder",
+  "participantStack.action.promote": "Bevorder tot moderator",
+  "participantStack.action.demote": "Verlaag tot kyker",
+  "participantStack.waiting.title": "Afwagtende gebruikers",
+  "participantStack.waiting.accept": "Aanvaar",
+  "participantStack.waiting.deny": "Verwerp",
+  "participantStack.waiting.allowEveryone": "Laat almal toe",
+  "participantStack.waiting.denyEveryone": "Verwerp almal"
+}

@@ -1,0 +1,15 @@
+{
+  "participantStack.stack.label": "Popis sudionika",
+  "participantStack.status.presenter": "Prezenter",
+  "participantStack.status.you": "Vi",
+  "participantStack.status.locked": "Zaključano",
+  "participantStack.action.lowerAllHands": "Spusti ruke",
+  "participantStack.action.makePresenter": "Postavi za prezentera",
+  "participantStack.action.promote": "Postavi za moderatora",
+  "participantStack.action.demote": "Vrati u ulogu gledatelja",
+  "participantStack.waiting.title": "Sudionici na čekanju",
+  "participantStack.waiting.accept": "Prihvati",
+  "participantStack.waiting.deny": "Odbij",
+  "participantStack.waiting.allowEveryone": "Dopusti svima",
+  "participantStack.waiting.denyEveryone": "Odbij svima"
+}
