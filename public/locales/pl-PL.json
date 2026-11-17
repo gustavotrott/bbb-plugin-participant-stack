@@ -22,6 +22,7 @@
   "participantStack.action.makePresenter": "Wyznacz na prelegenta",
   "participantStack.action.promote": "Awansuj na moderatora",
   "participantStack.action.demote": "Zdegraduj do zwykłego uczestnika",
+  "participantStack.users.title": "Uczestnicy",
   "participantStack.waiting.title": "Oczekujący uczestnicy",
   "participantStack.waiting.accept": "Akceptuj",
   "participantStack.waiting.deny": "Odrzuć",

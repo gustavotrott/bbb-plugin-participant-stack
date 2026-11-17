@@ -8,6 +8,7 @@
   "participantStack.action.makePresenter": "Padarīt par ziņotāju",
   "participantStack.action.promote": "Padarīt par moderatoru",
   "participantStack.action.demote": "Padarīt par vērotāju",
+  "participantStack.users.title": "Dalībnieki",
   "participantStack.waiting.title": "Gaidām daībniekus",
   "participantStack.waiting.allowEveryone": "Ļaut ikvienam",
   "participantStack.waiting.denyEveryone": "Liegt ikvienam"

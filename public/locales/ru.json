@@ -25,6 +25,7 @@
   "participantStack.action.makePresenter": "Сделать ведущим",
   "participantStack.action.promote": "Сделать модератором",
   "participantStack.action.demote": "Сделать участником",
+  "participantStack.users.title": "Пользователи ({userCount})",
   "participantStack.waiting.title": "Ожидающие пользователи",
   "participantStack.waiting.accept": "Принять",
   "participantStack.waiting.deny": "Отклонить",

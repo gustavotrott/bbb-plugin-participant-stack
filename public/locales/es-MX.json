@@ -19,6 +19,7 @@
   "participantStack.action.makePresenter": "Promover a presentador",
   "participantStack.action.promote": "Promover a moderador",
   "participantStack.action.demote": "Degradar a espectador",
+  "participantStack.users.title": "Usuarios",
   "participantStack.waiting.title": "Esperando usuarios",
   "participantStack.waiting.allowEveryone": "Permitir a todos",
   "participantStack.waiting.denyEveryone": "Negar a todos"

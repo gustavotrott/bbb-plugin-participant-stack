@@ -22,6 +22,7 @@
   "participantStack.action.makePresenter": "발표자 만들기",
   "participantStack.action.promote": "주관자로 승격",
   "participantStack.action.demote": "참여자로 강등",
+  "participantStack.users.title": "사용자 ({userCount})",
   "participantStack.waiting.title": "대기중인 사용자",
   "participantStack.waiting.accept": "수용",
   "participantStack.waiting.deny": "거절",

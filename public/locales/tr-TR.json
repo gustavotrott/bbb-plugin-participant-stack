@@ -22,6 +22,7 @@
   "participantStack.action.makePresenter": "Sunum yetkisi ver",
   "participantStack.action.promote": "Moderatör yap",
   "participantStack.action.demote": "İzleyici yap",
+  "participantStack.users.title": "Kullanıcılar",
   "participantStack.waiting.title": "Kullanıcılar bekleniyor",
   "participantStack.waiting.accept": "Kabul et",
   "participantStack.waiting.deny": "Reddet",

@@ -36,6 +36,7 @@ const FROM_CLIENT = {
   'action.makePresenter': 'app.userList.menu.makePresenter.label',
   'action.promote': 'app.userList.menu.promoteUser.label',
   'action.demote': 'app.userList.menu.demoteUser.label',
+  'users.title': 'app.userList.usersTitle',
   'waiting.title': 'app.userList.guest.waitingUsers',
   'waiting.accept': 'app.userList.guest.acceptLabel',
   'waiting.deny': 'app.userList.guest.denyLabel',

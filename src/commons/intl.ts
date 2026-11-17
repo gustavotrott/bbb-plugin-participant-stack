@@ -117,6 +117,10 @@ export const messages = defineMessages({
     id: 'participantStack.waiting.denyEveryone',
     defaultMessage: 'Deny everyone ({count})',
   },
+  users: {
+    id: 'participantStack.users.title',
+    defaultMessage: 'Users ({userCount})',
+  },
   options: {
     id: 'participantStack.preferences.options',
     defaultMessage: 'Options',

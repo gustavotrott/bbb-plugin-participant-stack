@@ -13,6 +13,7 @@
   "participantStack.action.makePresenter": "تغییر نقش به ارائه‌دهنده",
   "participantStack.action.promote": "ارتقای نقش به مدیر",
   "participantStack.action.demote": "تبدیل به کاربر عادی",
+  "participantStack.users.title": "کاربران ({userCount})",
   "participantStack.waiting.title": "کاربران درحال انتظار",
   "participantStack.waiting.accept": "پذیرفتن",
   "participantStack.waiting.deny": "ردکردن",

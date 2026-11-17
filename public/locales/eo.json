@@ -9,6 +9,7 @@
   "participantStack.action.makePresenter": "Fari prezentanto",
   "participantStack.action.promote": "Promocii al administranto",
   "participantStack.action.demote": "Malpromocii al spektanto",
+  "participantStack.users.title": "Uzantoj",
   "participantStack.waiting.title": "Atendantaj Uzantoj",
   "participantStack.waiting.accept": "Akcepti",
   "participantStack.waiting.deny": "Rifuzi",

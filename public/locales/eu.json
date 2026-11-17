@@ -15,6 +15,7 @@
   "participantStack.action.makePresenter": "Eman aurkezle rola",
   "participantStack.action.promote": "Goratu moderatzaile rolera",
   "participantStack.action.demote": "Beheratu ikusle rolera",
+  "participantStack.users.title": "Erabiltzaileak ({userCount})",
   "participantStack.waiting.title": "Itxaron zerrenda",
   "participantStack.waiting.accept": "Onartu",
   "participantStack.waiting.deny": "Ukatu",

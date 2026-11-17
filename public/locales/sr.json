@@ -9,6 +9,7 @@
   "participantStack.action.makePresenter": "Dodelite ulogu predavača",
   "participantStack.action.promote": "Unapredite u ulogu moderatora",
   "participantStack.action.demote": "Vratite u ulogu običnog učesnika",
+  "participantStack.users.title": "Učesnici",
   "participantStack.waiting.title": "Čekaju se učesnici",
   "participantStack.waiting.allowEveryone": "Dozvolite pristup svima",
   "participantStack.waiting.denyEveryone": "Odbijte pristup svima"

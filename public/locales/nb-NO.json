@@ -24,6 +24,7 @@
   "participantStack.action.makePresenter": "Gi presentator",
   "participantStack.action.promote": "Oppgrader til moderator",
   "participantStack.action.demote": "Nedgrader til deltager",
+  "participantStack.users.title": "Brukere ({userCount})",
   "participantStack.waiting.title": "Ventende brukere",
   "participantStack.waiting.accept": "Godkjenn",
   "participantStack.waiting.deny": "Avslå",

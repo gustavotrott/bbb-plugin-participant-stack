@@ -21,6 +21,7 @@
   "participantStack.action.makePresenter": "Presentator maken",
   "participantStack.action.promote": "Promoveren tot moderator",
   "participantStack.action.demote": "Degraderen tot gebruiker",
+  "participantStack.users.title": "Gebruikers",
   "participantStack.waiting.title": "Wachtende gebruikers",
   "participantStack.waiting.accept": "Accepteer",
   "participantStack.waiting.deny": "Weiger",

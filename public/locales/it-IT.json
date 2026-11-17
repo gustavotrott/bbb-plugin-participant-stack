@@ -25,6 +25,7 @@
   "participantStack.action.makePresenter": "Promuovi a relatore",
   "participantStack.action.promote": "Promuovi a moderatore",
   "participantStack.action.demote": "Retrocedi a partecipante",
+  "participantStack.users.title": "Utenti ({userCount})",
   "participantStack.waiting.title": "Utenti in attesa",
   "participantStack.waiting.accept": "Accetta",
   "participantStack.waiting.deny": "Nega",

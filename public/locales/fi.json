@@ -19,6 +19,7 @@
   "participantStack.action.makePresenter": "Anna Esittäjän-oikeudet",
   "participantStack.action.promote": "Korota moderaattoriksi",
   "participantStack.action.demote": "Alenna katselijaksi",
+  "participantStack.users.title": "Käyttäjät",
   "participantStack.waiting.title": "Odotetaan käyttäjiä",
   "participantStack.waiting.allowEveryone": "Salli kaikkien liittyä",
   "participantStack.waiting.denyEveryone": "Estä kaikkien liittyminen"

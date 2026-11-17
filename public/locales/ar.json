@@ -25,6 +25,7 @@
   "participantStack.action.makePresenter": "جعل مقدم",
   "participantStack.action.promote": "الترقية إلى مشرف",
   "participantStack.action.demote": "تخفيض الى المشاهد",
+  "participantStack.users.title": "المستخدمون ({userCount})",
   "participantStack.waiting.title": "انتظار المستخدمين",
   "participantStack.waiting.accept": "قبول",
   "participantStack.waiting.deny": "رفض",

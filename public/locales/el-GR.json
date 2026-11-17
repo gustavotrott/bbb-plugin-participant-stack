@@ -25,6 +25,7 @@
   "participantStack.action.makePresenter": "Ορισμός ως παρουσιαστή",
   "participantStack.action.promote": "Προαγωγή σε συντονιστή",
   "participantStack.action.demote": "Υποβίβαση σε θεατή",
+  "participantStack.users.title": "Χρήστες ({userCount})",
   "participantStack.waiting.title": "Αναμονή χρηστών",
   "participantStack.waiting.accept": "Αποδοχή",
   "participantStack.waiting.deny": "Απόρριψη",

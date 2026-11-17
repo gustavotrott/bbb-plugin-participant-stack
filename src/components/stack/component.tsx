@@ -169,13 +169,20 @@ function Stack({
         hasWaiting ? withWaiting : fitIn(forItems),
       );
       const all = busy > capacity ? buildEntries(activity, settings, true) : separate;
+      // The total counter is one more item, always there
+      const items = all.length + (settings.counter === 'total' ? 1 : 0);
       // Spread out, everything that fits is shown, past the usual limit
-      const wanted = spread ? all.length : Math.min(all.length, settings.maxVisible);
+      const wanted = spread ? items : Math.min(items, settings.maxVisible);
       // Short of room, the avatars come first: the waiting pill appears on expanding
       const waitingFits = hasWaiting && (spread || withWaiting >= wanted);
       const fit = Math.min(wanted, waitingFits ? withWaiting : fitIn(forItems));
       return {
-        entries: limitEntries(all, fit, activity.total),
+        entries: limitEntries(
+          all,
+          fit,
+          activity.total,
+          settings.counter === 'total' ? activity.everyone : undefined,
+        ),
         showWaiting: waitingFits,
         // Something going on is out of sight: a reason to expand
         holdsBack: busy > capacity || (hasWaiting && !waitingFits),
@@ -253,6 +260,9 @@ function Stack({
   const groupTitle = (entry: StackEntry) => {
     if (entry.kind === 'reactions') return `${entry.emoji} ${entry.users.length}`;
     if (entry.kind === 'hands') return `${intl.formatMessage(messages.raisedHands)} (${entry.users.length})`;
+    if (entry.kind === 'overflow' && entry.all) {
+      return intl.formatMessage(messages.users, { userCount: entry.count });
+    }
     return `+${entry.kind === 'overflow' ? entry.count : ''}`;
   };
 
@@ -302,7 +312,8 @@ function Stack({
         aria-label={label}
       >
         <AvatarFace $muted>
-          {entry.kind === 'overflow' ? `+${entry.count}` : entry.users.length}
+          {entry.kind === 'overflow' && `${entry.all ? '' : '+'}${entry.count}`}
+          {entry.kind !== 'overflow' && entry.users.length}
         </AvatarFace>
         {entry.kind === 'reactions' && <Badge $kind="emoji">{entry.emoji}</Badge>}
         {entry.kind === 'overflow' && waitingHint && <Badge $kind="waiting"><ClockIcon /></Badge>}

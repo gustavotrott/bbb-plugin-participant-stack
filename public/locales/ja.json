@@ -25,6 +25,7 @@
   "participantStack.action.makePresenter": "発表者にする",
   "participantStack.action.promote": "司会者にする",
   "participantStack.action.demote": "視聴者に戻す",
+  "participantStack.users.title": "ユーザー ({userCount})",
   "participantStack.waiting.title": "待機中のユーザー",
   "participantStack.waiting.accept": "承認",
   "participantStack.waiting.deny": "却下",

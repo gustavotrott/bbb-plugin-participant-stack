@@ -9,6 +9,7 @@
   "participantStack.action.makePresenter": "Določi za govornika",
   "participantStack.action.promote": "Povišaj v moderatorja",
   "participantStack.action.demote": "Znižaj v opazovalca",
+  "participantStack.users.title": "Uporabniki",
   "participantStack.waiting.title": "Čakanje udeležencev",
   "participantStack.waiting.accept": "Sprejmi",
   "participantStack.waiting.deny": "Zavrni",

@@ -7,6 +7,7 @@
   "participantStack.action.makePresenter": "Postavi za prezentera",
   "participantStack.action.promote": "Postavi za moderatora",
   "participantStack.action.demote": "Vrati u ulogu gledatelja",
+  "participantStack.users.title": "Korisnici",
   "participantStack.waiting.title": "Sudionici na čekanju",
   "participantStack.waiting.accept": "Prihvati",
   "participantStack.waiting.deny": "Odbij",

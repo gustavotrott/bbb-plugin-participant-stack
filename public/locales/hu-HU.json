@@ -25,6 +25,7 @@
   "participantStack.action.makePresenter": "Legyen az előadó",
   "participantStack.action.promote": "Előléptetés szervezővé",
   "participantStack.action.demote": "Lefokozás résztvevővé",
+  "participantStack.users.title": "Felhasználók ({userCount})",
   "participantStack.waiting.title": "Várakozók",
   "participantStack.waiting.accept": "Engedélyezés",
   "participantStack.waiting.deny": "Tiltás",

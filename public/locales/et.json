@@ -15,6 +15,7 @@
   "participantStack.action.makePresenter": "Muuda esitlejaks",
   "participantStack.action.promote": "Ülenda moderaatoriks",
   "participantStack.action.demote": "Alanda vaatajaks",
+  "participantStack.users.title": "Kasutajad ({userCount})",
   "participantStack.waiting.title": "Ootavad kasutajad",
   "participantStack.waiting.accept": "Luba",
   "participantStack.waiting.deny": "Keela",

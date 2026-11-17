@@ -10,6 +10,7 @@
   "participantStack.action.makePresenter": "Padaryti pranešėju",
   "participantStack.action.promote": "Paaukštinti iki moderatoriaus",
   "participantStack.action.demote": "Nužeminti iki žiūrovo",
+  "participantStack.users.title": "Vartotojai",
   "participantStack.waiting.title": "Laukiama naudotojų",
   "participantStack.waiting.accept": "Priimti",
   "participantStack.waiting.deny": "Atmesti",

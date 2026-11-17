@@ -25,6 +25,7 @@
   "participantStack.action.makePresenter": "Make presenter",
   "participantStack.action.promote": "Promote to moderator",
   "participantStack.action.demote": "Demote to viewer",
+  "participantStack.users.title": "Users ({userCount})",
   "participantStack.waiting.title": "Waiting Users",
   "participantStack.waiting.accept": "Accept",
   "participantStack.waiting.deny": "Deny",

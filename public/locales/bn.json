@@ -10,6 +10,7 @@
   "participantStack.action.makePresenter": "উপস্থাপক তৈরি করুন",
   "participantStack.action.promote": "মডারেটর প্রচার করুন",
   "participantStack.action.demote": "দর্শকের কাছে হ্রাস করা",
+  "participantStack.users.title": "ব্যবহারকারীরা",
   "participantStack.waiting.title": "ব্যবহারকারীরা অপেক্ষা করছেন",
   "participantStack.waiting.accept": "গ্রহণ করুন",
   "participantStack.waiting.deny": "অস্বীকার করুন",

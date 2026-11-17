@@ -19,6 +19,7 @@
   "participantStack.action.makePresenter": "Faceti prezentator",
   "participantStack.action.promote": "Promoveaza la moderator",
   "participantStack.action.demote": "Retrogradeaza la spectator",
+  "participantStack.users.title": "Utilizatori",
   "participantStack.waiting.title": "Asteptarea utilizatorilor",
   "participantStack.waiting.allowEveryone": "Permite pe oricine",
   "participantStack.waiting.denyEveryone": "Interzice la toti"

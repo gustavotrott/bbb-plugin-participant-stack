@@ -23,6 +23,7 @@
   "participantStack.action.makePresenter": "Promover a presentador",
   "participantStack.action.promote": "Promover a moderador",
   "participantStack.action.demote": "Relegado a espectador",
+  "participantStack.users.title": "Usuarios ({userCount})",
   "participantStack.waiting.title": "Usuarios agardando",
   "participantStack.waiting.accept": "Aceptar",
   "participantStack.waiting.deny": "Denegar",

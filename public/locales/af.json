@@ -9,6 +9,7 @@
   "participantStack.action.makePresenter": "Maak aanbieder",
   "participantStack.action.promote": "Bevorder tot moderator",
   "participantStack.action.demote": "Verlaag tot kyker",
+  "participantStack.users.title": "Gebruikers",
   "participantStack.waiting.title": "Afwagtende gebruikers",
   "participantStack.waiting.accept": "Aanvaar",
   "participantStack.waiting.deny": "Verwerp",

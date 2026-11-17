@@ -8,6 +8,7 @@
   "participantStack.action.makePresenter": "Направи презентатор",
   "participantStack.action.promote": "Повиши до модератор",
   "participantStack.action.demote": "Понижи до участник",
+  "participantStack.users.title": "Потребители",
   "participantStack.waiting.title": "Изчаква потребители",
   "participantStack.waiting.allowEveryone": "Разреши всички",
   "participantStack.waiting.denyEveryone": "Забрани всички"

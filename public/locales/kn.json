@@ -8,6 +8,7 @@
   "participantStack.action.makePresenter": "ಪ್ರಸ್ತುತಪಡುವವರಾಗಿ ಮಾಡಿ",
   "participantStack.action.promote": "ಮಾಡರೇಟರ್‌ಗೆ ಮುಂಬಡ್ತಿ ನೀಡಿ",
   "participantStack.action.demote": "ವೀಕ್ಷಕರಾಗಿ ಹಿಂಬಡ್ತಿ ನೀಡಿ",
+  "participantStack.users.title": "ಬಳಕೆದಾರರು",
   "participantStack.waiting.title": "ಕಾಯುತ್ತಿರುವ ಬಳಕೆದಾರರು",
   "participantStack.waiting.allowEveryone": "ಎಲ್ಲರಿಗೂ ಅನುಮತಿಸಿ",
   "participantStack.waiting.denyEveryone": "ಎಲ್ಲರನ್ನು ನಿರಾಕರಿಸು"

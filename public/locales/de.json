@@ -25,6 +25,7 @@
   "participantStack.action.makePresenter": "Präsentationsrechte geben",
   "participantStack.action.promote": "Moderationsrechte vergeben",
   "participantStack.action.demote": "Moderationsrechte entziehen",
+  "participantStack.users.title": "Teilnehmer ({userCount})",
   "participantStack.waiting.title": "Wartende Personen",
   "participantStack.waiting.accept": "Akzeptieren",
   "participantStack.waiting.deny": "Ablehnen",

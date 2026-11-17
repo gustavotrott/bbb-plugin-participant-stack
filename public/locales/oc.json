@@ -6,6 +6,7 @@
   "participantStack.action.unlockUser": "Desbarrar {userName}",
   "participantStack.action.lockUser": "Barrar {userName}",
   "participantStack.action.makePresenter": "Far venir presentator",
+  "participantStack.users.title": "Utilizaires",
   "participantStack.waiting.accept": "Acceptar",
   "participantStack.waiting.deny": "Refusar"
 }

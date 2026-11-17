@@ -20,6 +20,7 @@
   "participantStack.action.makePresenter": "עדכון תפקיד למציג",
   "participantStack.action.promote": "עדכון תפקיד למנחה",
   "participantStack.action.demote": "עדכון תפקיד לצופה",
+  "participantStack.users.title": "משתתפים",
   "participantStack.waiting.title": "משתמשים ממתינים",
   "participantStack.waiting.accept": "אושר",
   "participantStack.waiting.deny": "נדחה",

@@ -19,5 +19,6 @@
   "participantStack.action.lockUser": "Bloquear {userName}",
   "participantStack.action.makePresenter": "Promover a presentador",
   "participantStack.action.promote": "Promover a moderador",
-  "participantStack.action.demote": "Degradar a espectador"
+  "participantStack.action.demote": "Degradar a espectador",
+  "participantStack.users.title": "Usuarios"
 }

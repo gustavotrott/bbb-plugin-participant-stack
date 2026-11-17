@@ -12,6 +12,7 @@
   "participantStack.action.makePresenter": "Դարձնել ներկայացնող",
   "participantStack.action.promote": "Դարձնել մոդերատոր",
   "participantStack.action.demote": "Դարձնել հասարակ մասնակից",
+  "participantStack.users.title": "Օգտվողներ ({userCount})",
   "participantStack.waiting.title": "Սպասում ենք մասնակիցների",
   "participantStack.waiting.accept": "Ընդունել",
   "participantStack.waiting.deny": "Մերժել",

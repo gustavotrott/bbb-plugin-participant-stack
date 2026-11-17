@@ -24,6 +24,7 @@
   "participantStack.action.makePresenter": "Gör till presentatör",
   "participantStack.action.promote": "Gör till moderator",
   "participantStack.action.demote": "Gör till åskådare",
+  "participantStack.users.title": "Användare ({userCount})",
   "participantStack.waiting.title": "Väntande användare",
   "participantStack.waiting.accept": "Acceptera",
   "participantStack.waiting.deny": "Neka",

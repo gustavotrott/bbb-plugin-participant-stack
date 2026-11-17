@@ -21,6 +21,7 @@
   "participantStack.action.makePresenter": "设为演示者",
   "participantStack.action.promote": "提升为主持人 ",
   "participantStack.action.demote": "降级为观众",
+  "participantStack.users.title": "用户",
   "participantStack.waiting.title": "等待中的用户",
   "participantStack.waiting.accept": "同意",
   "participantStack.waiting.deny": "拒绝",

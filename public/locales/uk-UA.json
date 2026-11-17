@@ -23,6 +23,7 @@
   "participantStack.action.makePresenter": "Зробити ведучим",
   "participantStack.action.promote": "Зробити модератором",
   "participantStack.action.demote": "Зробити глядачем",
+  "participantStack.users.title": "Користувачі ({userCount})",
   "participantStack.waiting.title": "Учасники у очікуванні",
   "participantStack.waiting.accept": "Прийняти",
   "participantStack.waiting.deny": "Відмовити",

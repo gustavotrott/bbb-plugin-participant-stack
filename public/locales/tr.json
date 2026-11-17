@@ -25,6 +25,7 @@
   "participantStack.action.makePresenter": "Sunucu yap",
   "participantStack.action.promote": "Sorumlu yap",
   "participantStack.action.demote": "İzleyici yap",
+  "participantStack.users.title": "Kullanıcılar ({userCount})",
   "participantStack.waiting.title": "Kullanıcılar bekleniyor",
   "participantStack.waiting.accept": "Kabul et",
   "participantStack.waiting.deny": "Reddet",

@@ -15,6 +15,7 @@
   "participantStack.action.makePresenter": "ตั้งเป็นผู้นำเสนอ",
   "participantStack.action.promote": "เลื่อนตำแหน่งเป็นผู้ดูแล",
   "participantStack.action.demote": "ลดตำแหน่งเป็นผู้ชม",
+  "participantStack.users.title": "ผู้ใช้ ({userCount})",
   "participantStack.waiting.title": "ผู้ใช้ที่กำลังรอ",
   "participantStack.waiting.accept": "ยอมรับ",
   "participantStack.waiting.deny": "ปฏิเสธ",

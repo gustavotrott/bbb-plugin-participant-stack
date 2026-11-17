@@ -18,5 +18,6 @@
   "participantStack.action.lockUser": "Khóa {userName}",
   "participantStack.action.makePresenter": "Tạo trình chiếu",
   "participantStack.action.promote": "Bổ nhiệm là quản trị",
-  "participantStack.action.demote": "Hạ cấp người xem"
+  "participantStack.action.demote": "Hạ cấp người xem",
+  "participantStack.users.title": "Thành viên"
 }

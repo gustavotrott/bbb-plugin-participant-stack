@@ -16,7 +16,8 @@ export type StackEntry =
   | { kind: 'hands'; key: string; users: ActivityUser[] }
   | { kind: 'reactions'; key: string; emoji: string; users: ActivityUser[] }
   // `count` is everyone not shown; `users` are the ones of them the stack knows
-  | { kind: 'overflow'; key: string; users: ActivityUser[]; count: number };
+  // With `all`, the item stands for the whole meeting instead of the users not shown
+  | { kind: 'overflow'; key: string; users: ActivityUser[]; count: number; all?: boolean };
 
 export interface WaitingUser {
   userId: string;

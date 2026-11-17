@@ -148,7 +148,7 @@ interface UserListMenuProps {
 
 // A menu is a glance, not the user list: in a large meeting it names this many
 // users at most and closes with the count of the others
-const MAX_LISTED = 30;
+const MAX_LISTED = 50;
 
 export function UserListMenu({
   title, users, viewer, intl, actions, footer = undefined, more = 0, onDone,

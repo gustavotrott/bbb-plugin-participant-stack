@@ -27,6 +27,9 @@ export interface Activity {
   reacting: ActivityUser[];
   // The others on the first page of the user list: moderators first, then by name
   others: ActivityUser[];
+  // Everyone the stack knows, as the user list orders them: presenter, moderators,
+  // then by name, followed by whoever is active beyond the first page
+  everyone: ActivityUser[];
   // Users in the meeting, including the ones the stack knows nothing else about
   total: number;
 }
@@ -103,11 +106,18 @@ export const useActivity = (pluginApi: PluginApi): Activity => {
       // The page comes sorted by name within each role; the sort is stable
       .sort((a, b) => Number(b.isModerator) - Number(a.isModerator));
 
+    const onPage = new Set(page.map((u) => u.userId));
+    const everyone = [
+      ...page.map((u) => users.get(u.userId) ?? known.get(u.userId)!),
+      ...Array.from(users.values()).filter((user) => !onPage.has(user.userId)),
+    ];
+
     return {
       presenter: presenterId ? users.get(presenterId) : undefined,
       hands: handIds.map((id) => users.get(id)!),
       reacting: reactingIds.map((id) => users.get(id)!),
       others,
+      everyone,
       total: Math.max(countData?.user_aggregate?.aggregate?.count ?? 0, users.size + others.length),
     };
   }, [pageData, countData, handsData, reactions]);
@@ -192,10 +202,26 @@ export const buildEntries = (
 const usersIn = (entry: StackEntry) => (entry.kind === 'user' ? [entry.user] : entry.users);
 
 /**
- * Keeps the first entries and folds the rest into one "+N" entry, which also
- * stands for the users of the meeting the stack knows only by their number.
+ * Keeps the first entries and closes the stack with one counter.
+ *
+ * With `everyone`, the counter is the number of users in the meeting and holds
+ * them all; it is always there, so it is a steady target and an at-a-glance
+ * total. Without, it is a "+N" for the users that did not fit, also the ones the
+ * stack knows only by their number, and it is only there when there are any.
  */
-export const limitEntries = (entries: StackEntry[], max: number, total: number): StackEntry[] => {
+export const limitEntries = (
+  entries: StackEntry[],
+  max: number,
+  total: number,
+  everyone?: ActivityUser[],
+): StackEntry[] => {
+  if (everyone) {
+    if (total < 2) return entries.slice(0, max);
+    return [...entries.slice(0, Math.max(max - 1, 1)), {
+      kind: 'overflow', key: 'overflow', users: everyone, count: total, all: true,
+    }];
+  }
+
   const listed = new Set(entries.flatMap(usersIn).map((user) => user.userId)).size;
   const unlisted = Math.max(total - listed, 0);
   if (entries.length <= max && unlisted === 0) return entries;

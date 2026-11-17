@@ -9,6 +9,7 @@
   "participantStack.action.makePresenter": "გახადე წამყვანად ",
   "participantStack.action.promote": "მოდერატორის უფლებების მინიჭება",
   "participantStack.action.demote": "მნახველის უფლებების მინიჭება",
+  "participantStack.users.title": "მომხმარებლები",
   "participantStack.waiting.title": "მომხმარებლების ლოდინი",
   "participantStack.waiting.accept": "თანხმობა",
   "participantStack.waiting.deny": "უარყოფა",

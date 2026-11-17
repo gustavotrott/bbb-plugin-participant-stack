@@ -10,6 +10,7 @@
   "participantStack.action.makePresenter": "അവതാരകനാക്കുക",
   "participantStack.action.promote": "മോഡറേറ്ററായി പ്രമോട്ടുചെയ്യുക",
   "participantStack.action.demote": "കാഴ്ചക്കാരന് ഡെമോട്ട് ചെയ്യുക",
+  "participantStack.users.title": "ഉപയോക്താക്കൾ",
   "participantStack.waiting.title": "ഉപയോക്താക്കളെ കാത്തിരിക്കുന്നു",
   "participantStack.waiting.accept": "അംഗീകരിക്കുക",
   "participantStack.waiting.deny": "നിരസിക്കുക",

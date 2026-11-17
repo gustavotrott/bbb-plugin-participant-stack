@@ -10,6 +10,7 @@
   "participantStack.action.makePresenter": "ހުށައެޅުންތެރިއަކަށް ހަދާ",
   "participantStack.action.promote": "މޮޑެރޭޓަރަކަށް ޕްރޮމޯޓުކުރޭ",
   "participantStack.action.demote": "ބެލުންތެރިއަކަށް ޑިމޯޓްކުރޭ",
+  "participantStack.users.title": "މީހުން",
   "participantStack.waiting.title": "މަޑުކޮށްގެން ތިބި ޔޫސަރ އިން",
   "participantStack.waiting.accept": "ގަބޫލްކުރޭ",
   "participantStack.waiting.deny": "އިންކާރު ކުރޭ",

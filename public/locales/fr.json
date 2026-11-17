@@ -25,6 +25,7 @@
   "participantStack.action.makePresenter": "Définir comme présentateur",
   "participantStack.action.promote": "Promouvoir comme modérateur",
   "participantStack.action.demote": "Rétrograder comme spectateur",
+  "participantStack.users.title": "Utilisateurs ({userCount})",
   "participantStack.waiting.title": "Utilisateurs en attente",
   "participantStack.waiting.accept": "Accepter",
   "participantStack.waiting.deny": "Refuser"

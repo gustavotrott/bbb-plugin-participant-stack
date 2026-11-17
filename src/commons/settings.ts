@@ -18,6 +18,9 @@ export type VisibleTo = typeof VISIBLE_TO[number];
 export const EXPAND_ON_HOVER = ['activity', 'always', 'never'] as const;
 export type ExpandOnHover = typeof EXPAND_ON_HOVER[number];
 
+export const COUNTERS = ['total', 'hidden'] as const;
+export type Counter = typeof COUNTERS[number];
+
 export const DESIGNS = ['overlap', 'spaced', 'summary'] as const;
 export type Design = typeof DESIGNS[number];
 
@@ -43,6 +46,9 @@ export interface Settings {
   expandOnHover: ExpandOnHover;
   // Phones have no room in the bars and no hover; off by default there
   showOnMobile: boolean;
+  // The last item of the stack. 'total': the number of users in the meeting, opening
+  // the list of everyone. 'hidden': "+N", the users that did not fit, opening those.
+  counter: Counter;
   // From this many users with the same reaction on, they become one "N x emoji" item
   groupReactionsFrom: number;
   showPresenter: boolean;
@@ -65,6 +71,7 @@ export const DEFAULT_SETTINGS: Settings = {
   hideWhenUserListOpen: true,
   design: 'overlap',
   maxVisible: 15,
+  counter: 'total',
   expandOnHover: 'activity',
   showOnMobile: false,
   groupReactionsFrom: 3,
@@ -130,6 +137,7 @@ export const parseSettings = (raw: Record<string, unknown>): Settings => ({
   hideWhenUserListOpen: bool(raw.hideWhenUserListOpen, DEFAULT_SETTINGS.hideWhenUserListOpen),
   design: oneOf(raw.design, DESIGNS, DEFAULT_SETTINGS.design),
   maxVisible: positiveInt(raw.maxVisible, DEFAULT_SETTINGS.maxVisible),
+  counter: oneOf(raw.counter, COUNTERS, DEFAULT_SETTINGS.counter),
   expandOnHover: oneOf(raw.expandOnHover, EXPAND_ON_HOVER, DEFAULT_SETTINGS.expandOnHover),
   showOnMobile: bool(raw.showOnMobile, DEFAULT_SETTINGS.showOnMobile),
   groupReactionsFrom: positiveInt(raw.groupReactionsFrom, DEFAULT_SETTINGS.groupReactionsFrom),

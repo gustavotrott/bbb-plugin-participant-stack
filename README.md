@@ -18,7 +18,7 @@ In this order, for as long as there is room:
 2. users with a raised hand, in the order they raised it;
 3. users with an active reaction;
 4. everyone else, moderators first;
-5. a `+N` item with the users of the meeting that did not fit;
+5. a counter with the number of users in the meeting, which opens the list of everyone;
 6. for moderators, a pill with the number of users in the waiting room.
 
 Each avatar carries up to two marks. The lower corner takes a raised hand, else the reaction, else the presenter mark. The upper corner takes whatever comes next (a raised hand and a reaction show together), and otherwise a crown for moderators. A user's avatar image is used when they have one.
@@ -43,11 +43,11 @@ By default the stack is shown to moderators and the presenter. See [`visibleTo`]
 
 ![Five users clapping, as one item](docs/reactions.png)
 
-**See who else is there.** `+N` stands for the users that did not fit. Clicking a name in its menu opens that user's actions. The menu names the first of them, 30 at most and only those on the first page of the user list, and closes with a `+X` for the others, so it stays light in a large meeting.
+**See everyone.** The last item is the number of users in the meeting. It opens the list of everyone, in the order of the user list (presenter, moderators, then by name), and clicking a name opens that user's actions. To stay light in a large meeting, the list names the first page of the user list plus whoever has something going on, 50 at most, and closes with a `+X` for the others. With `counter: hidden` the item is a `+N` for the users that did not fit instead.
 
-![The users that did not fit](docs/more.png)
+![The list of everyone in the meeting](docs/more.png)
 
-**Stay small, expand on demand.** At rest the stack keeps to the free room of the bar and to 15 items. When that leaves a raised hand, a reaction or the waiting room out of sight, the pointer on the stack expands it: the meeting title gives way and everything that fits is shown. Users with nothing going on stay in the `+N` menu.
+**Stay small, expand on demand.** At rest the stack keeps to the free room of the bar and to 15 items. When that leaves a raised hand, a reaction or the waiting room out of sight, the pointer on the stack expands it: the meeting title gives way and everything that fits is shown. Users with nothing going on stay in the list of the counter.
 
 | At rest, with the chat open |
 |---|
@@ -162,6 +162,7 @@ public:
 | `positions` | all but `media-top-left` | The positions offered to users, as a list or a comma-separated string |
 | `expandOnHover` | `activity` | `activity`: expands only when a raised hand, a reaction or the waiting pill is out of sight. `always`: expands to every user that fits. `never` |
 | `showOnMobile` | `false` | Shows the stack on phones (windows up to 640px wide) too |
+| `counter` | `total` | The last item. `total`: the number of users in the meeting, opening the list of everyone. `hidden`: `+N`, the users that did not fit |
 | `maxVisible` | `15` | Most items shown at rest before the rest collapse into `+N`. Fewer are shown when the bar runs out of room |
 | `showIdleUsers` | `true` | Fills the remaining room with the users that have no hand raised and no reaction. `false` shows activity only |
 | `groupReactionsFrom` | `3` | Users with the same reaction needed to group them, when there is no room to show them one by one |
@@ -204,7 +205,7 @@ work, but stop being shared.
 Consequences worth knowing:
 
 - Users beyond the first page are known only by their number, unless they raise a hand or react. The `+N`
-  menu lists up to 30 of the ones it knows and closes with the count of the others.
+  menu lists up to 50 of the ones it knows and closes with the count of the others.
 - A reaction made more than 15 seconds before a user joined is not shown to that user.
 - Nothing is subscribed to for users who do not see the stack (`visibleTo`, or hidden by the user).
 

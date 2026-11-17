@@ -14,6 +14,7 @@
   "participantStack.action.makePresenter": "Bëje paraqitës",
   "participantStack.action.promote": "Ngrijeni në rang moderatori",
   "participantStack.action.demote": "Uljani rangun në parës",
+  "participantStack.users.title": "Përdorues ({userCount})",
   "participantStack.waiting.title": "Përdorues Në Pritje",
   "participantStack.waiting.accept": "Pranojeni",
   "participantStack.waiting.deny": "Hidhe poshtë",

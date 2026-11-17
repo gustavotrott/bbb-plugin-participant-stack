@@ -10,6 +10,7 @@
   "participantStack.action.makePresenter": "Učiniť prednášajúcim",
   "participantStack.action.promote": "Povýšiť na moderátora",
   "participantStack.action.demote": "Degradovať na poslucháča",
+  "participantStack.users.title": "Užívatelia",
   "participantStack.waiting.title": "Čakajúci užívatelia",
   "participantStack.waiting.accept": "Povoliť",
   "participantStack.waiting.deny": "Zakázať",

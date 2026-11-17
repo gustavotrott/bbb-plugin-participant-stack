@@ -21,6 +21,7 @@
   "participantStack.action.makePresenter": "Làm người thuyết trình",
   "participantStack.action.promote": "Trao quyền điều hành",
   "participantStack.action.demote": "Hạ cấp xuống người xem",
+  "participantStack.users.title": "Người dùng",
   "participantStack.waiting.title": "Người dùng đang chờ",
   "participantStack.waiting.accept": "Chấp nhận",
   "participantStack.waiting.deny": "Từ chối",

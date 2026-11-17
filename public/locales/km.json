@@ -8,6 +8,7 @@
   "participantStack.action.makePresenter": "ឲ្យធ្វើជាអ្នកបង្ហាញ",
   "participantStack.action.promote": "ឲ្យធ្វើជាអ្នកសម្របសម្រួល",
   "participantStack.action.demote": "ឲ្យធ្វើជាអ្នកមើល",
+  "participantStack.users.title": "អ្នកចូលរួម",
   "participantStack.waiting.title": "កំពុងចាំអ្នកចូលរួម",
   "participantStack.waiting.allowEveryone": "អនុញ្ញាតគ្រប់គ្នា",
   "participantStack.waiting.denyEveryone": "បដិសេធគ្រប់គ្នា"

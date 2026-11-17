@@ -20,6 +20,7 @@
   "participantStack.action.makePresenter": "Jadikan penyaji",
   "participantStack.action.promote": "Promosikan jadi moderator",
   "participantStack.action.demote": "Turunkan jadi pemirsa",
+  "participantStack.users.title": "Pengguna",
   "participantStack.waiting.title": "Menunggu Pengguna",
   "participantStack.waiting.accept": "Terima",
   "participantStack.waiting.deny": "Tolak",
