@@ -27,8 +27,7 @@ export interface Activity {
   reacting: ActivityUser[];
   // The others on the first page of the user list: moderators first, then by name
   others: ActivityUser[];
-  // Everyone the stack knows, as the user list orders them: presenter, moderators,
-  // then by name, followed by whoever is active beyond the first page
+  // Everyone the stack knows, in the order of the stack
   everyone: ActivityUser[];
   // Users in the meeting, including the ones the stack knows nothing else about
   total: number;
@@ -81,14 +80,16 @@ export const useActivity = (pluginApi: PluginApi): Activity => {
     const presenterId = page.find((u) => u.presenter)?.userId;
     if (presenterId) upsert(presenterId, {});
 
-    const handIds = (handsData?.user ?? []).map((u) => {
-      upsert(u.userId, {
+    const handIds = (handsData?.user ?? []).map((u, index) => {
+      const user = upsert(u.userId, {
         name: u.name,
         color: u.color,
         presenter: u.presenter,
         isModerator: u.isModerator,
         locked: u.locked,
-      }).raiseHand = true;
+      });
+      user.raiseHand = true;
+      user.handPosition = index + 1;
       return u.userId;
     });
 
@@ -106,11 +107,12 @@ export const useActivity = (pluginApi: PluginApi): Activity => {
       // The page comes sorted by name within each role; the sort is stable
       .sort((a, b) => Number(b.isModerator) - Number(a.isModerator));
 
-    const onPage = new Set(page.map((u) => u.userId));
-    const everyone = [
-      ...page.map((u) => users.get(u.userId) ?? known.get(u.userId)!),
-      ...Array.from(users.values()).filter((user) => !onPage.has(user.userId)),
-    ];
+    // Same order as the stack: presenter, hands as they were raised, reactions, the rest
+    const everyone = Array.from(new Set([
+      ...(presenterId ? [presenterId] : []),
+      ...handIds,
+      ...reactingIds,
+    ])).map((id) => users.get(id)!).concat(others);
 
     return {
       presenter: presenterId ? users.get(presenterId) : undefined,

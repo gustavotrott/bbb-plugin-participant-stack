@@ -539,14 +539,47 @@ export const UserRowAvatar = styled.span`
   flex: none;
   display: flex;
 
-  /* Smaller avatar, so the badge moves out to keep the initials readable */
+  /* The moderator's crown, on a white menu instead of the pill */
   & > span + span {
-    inset-inline-end: -0.45rem;
-    bottom: -0.35rem;
-    width: 1.05rem;
-    height: 1.05rem;
-    font-size: 0.7rem;
+    --pav-ring: var(--pav-surface);
+    inset-inline-end: -0.3rem;
+    top: -0.2rem;
   }
+`;
+
+// What a user of a list is doing, at the end of their row
+export const RowMarks = styled.span`
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+`;
+
+export const RowMark = styled.span<{ $kind: 'hand' | 'emoji' | 'presenter' }>`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  height: 1.5rem;
+  min-width: 1.5rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+
+  ${({ $kind }) => $kind === 'hand' && css`
+    padding: 0 0.45rem 0 0.35rem;
+    background: var(--pav-hand);
+    color: #3A2A00;
+  `}
+  ${({ $kind }) => $kind === 'presenter' && css`
+    background: var(--pav-primary);
+    color: #FFF;
+  `}
+  ${({ $kind }) => $kind === 'emoji' && css`
+    font-size: 1.05rem;
+  `}
 `;
 
 // Back from a user's menu to the list it was opened from

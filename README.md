@@ -43,7 +43,7 @@ By default the stack is shown to moderators and the presenter. See [`visibleTo`]
 
 ![Five users clapping, as one item](docs/reactions.png)
 
-**See everyone.** The last item is the number of users in the meeting. It opens the list of everyone, in the order of the user list (presenter, moderators, then by name), and clicking a name opens that user's actions. To stay light in a large meeting, the list names the first page of the user list plus whoever has something going on, 50 at most, and closes with a `+X` for the others. With `counter: hidden` the item is a `+N` for the users that did not fit instead.
+**See everyone.** The last item is the number of users in the meeting. It opens the list of everyone in the same order as the stack (presenter, raised hands, reactions, then moderators and the rest by name). Each row shows what the user is doing, with the place in the queue for a raised hand, and clicking a name opens that user's actions. To stay light in a large meeting, the list names the first page of the user list plus whoever has something going on, 50 at most, and closes with a `+X` for the others. With `counter: hidden` the item is a `+N` for the users that did not fit instead.
 
 ![The list of everyone in the meeting](docs/more.png)
 

@@ -1,6 +1,6 @@
 {
   "name": "bbb-plugin-participant-stack",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "BigBlueButton plugin that keeps the people of the meeting in sight: presenter, raised hands, reactions and waiting users as a stack of avatars in the top bar.",
   "private": true,
   "license": "MIT",

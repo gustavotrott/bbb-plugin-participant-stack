@@ -7,6 +7,8 @@ import {
   BackIcon,
   CheckIcon,
   CloseIcon,
+  CrownIcon,
+  HandIcon,
   HandOffIcon,
   LockIcon,
   PresenterIcon,
@@ -15,17 +17,20 @@ import {
   UnlockIcon,
   UserIcon,
 } from '../../commons/icons';
-import { Avatar, StatusBadge } from '../avatar/component';
+import { Avatar } from '../avatar/component';
 import {
   MenuAction,
   MenuFooter,
   BackButton,
+  Badge,
   MenuList,
   MoreUsers,
   PopoverHeader,
   PopoverSubtitle,
   PopoverTitle,
   RowButton,
+  RowMark,
+  RowMarks,
   UserRow,
   UserRowAvatar,
   UserRowName,
@@ -46,7 +51,7 @@ export const statusOf = (user: ActivityUser, viewer: Viewer, intl: IntlShape): s
   user.userId === viewer.userId && intl.formatMessage(messages.you),
   user.presenter && intl.formatMessage(messages.presenter),
   user.isModerator && intl.formatMessage(messages.moderator),
-  user.raiseHand && intl.formatMessage(messages.raisedHand),
+  user.raiseHand && `${intl.formatMessage(messages.raisedHand)}${user.handPosition ? ` (${user.handPosition})` : ''}`,
   user.emoji,
   user.locked && !user.isModerator && viewer.hasActiveLockSetting
     && intl.formatMessage(messages.locked),
@@ -182,11 +187,21 @@ export function UserListMenu({
           <UserRow key={user.userId} title={statusOf(user, viewer, intl)}>
             <UserRowAvatar>
               <Avatar user={user} small />
-              <StatusBadge user={user} single />
+              {user.isModerator && <Badge $kind="moderator" $slot="upper"><CrownIcon /></Badge>}
             </UserRowAvatar>
             <UserRowName as="button" type="button" onClick={() => setSelectedId(user.userId)}>
               {user.name}
             </UserRowName>
+            <RowMarks aria-hidden>
+              {user.presenter && <RowMark $kind="presenter"><PresenterIcon /></RowMark>}
+              {user.emoji && <RowMark $kind="emoji">{user.emoji}</RowMark>}
+              {user.raiseHand && (
+                <RowMark $kind="hand">
+                  <HandIcon />
+                  {user.handPosition}
+                </RowMark>
+              )}
+            </RowMarks>
             {user.raiseHand && (mod || user.userId === viewer.userId) && (
               <RowButton
                 type="button"

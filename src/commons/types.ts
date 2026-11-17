@@ -8,6 +8,8 @@ export interface ActivityUser {
   // Unknown for users this plugin only knows from the basic user info
   locked?: boolean;
   raiseHand: boolean;
+  // Place in the queue of raised hands, from 1
+  handPosition?: number;
   emoji?: string;
 }
 
