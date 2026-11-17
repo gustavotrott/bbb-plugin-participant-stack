@@ -100,9 +100,8 @@ function Stack({
   // Not while a small screen has pushed the stack out of the bar
   const replacesTitle = position === 'navbar-center' && !!anchor.titleStyle;
 
-  // With the pointer on it (or a menu open, or keyboard focus inside) the stack
-  // expands: it shows everything it holds back to stay small, and in the top bar
-  // it may spread over the meeting title, which is hidden meanwhile.
+  // With the pointer on it (or a menu open, or keyboard focus inside) the stack may
+  // expand: it shows what it holds back to stay small (see `expandOnHover`).
   const [hovered, setHovered] = React.useState(false);
   const collapseTimer = React.useRef<number>();
   const hover = (value: boolean) => () => {
@@ -111,18 +110,6 @@ function Stack({
     else collapseTimer.current = window.setTimeout(() => setHovered(false), COLLAPSE_DELAY_MS);
   };
   React.useEffect(() => () => window.clearTimeout(collapseTimer.current), []);
-  const expanded = hovered || open !== null;
-  const [coversTitle, setCoversTitle] = React.useState(false);
-  React.useLayoutEffect(() => {
-    const titleRect = expanded && !replacesTitle
-      ? document.querySelector(TITLE_SELECTOR)?.getBoundingClientRect()
-      : undefined;
-    const rect = rootRef.current?.getBoundingClientRect();
-    setCoversTitle(!!titleRect && !!rect
-      && rect.right > titleRect.left - 12 && rect.left < titleRect.right + 12);
-  });
-
-  const { title, openDetails } = useMeetingTitle(replacesTitle || coversTitle);
   const canMove = settings.userCanMove && settings.positions.length > 1;
   const hasMore = settings.userCanHide || canMove || replacesTitle;
 
@@ -154,11 +141,12 @@ function Stack({
 
   const hasWaiting = viewer.isModerator && waiting.length > 0;
 
+  // The pointer is on the stack, keyboard focus is inside it or one of its menus is open
+  const engaged = hovered || open !== null;
   // At rest the options button only shows where there is no pointer to reveal it
-  const showMore = hasMore && (expanded || !canHover());
-  const room = expanded ? anchor.availableExpanded ?? anchor.available : anchor.available;
+  const showMore = hasMore && (engaged || !canHover());
 
-  const { entries, showWaiting } = React.useMemo(() => {
+  const { entries, showWaiting, expanded } = React.useMemo(() => {
     // How many items fit in the free space of the bar the stack is docked in
     const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
     const size = anchor.size ?? defaultSize();
@@ -167,25 +155,59 @@ function Stack({
       1,
       Math.floor((width - 0.75 * rem - size) / steps[settings.design]) + 1,
     );
-    const forItems = room - (showMore ? 1.5 * rem : 0);
-    const withWaiting = fitIn(forItems - 5.5 * rem);
     // Users with the same reaction are shown one by one while everyone with
     // something going on fits, and become one item only when they do not
     const separate = buildEntries(activity, settings, false);
     const busy = separate.filter((entry) => entry.kind !== 'user'
       || entry.user.presenter || entry.user.raiseHand || entry.user.emoji).length;
-    const capacity = Math.min(
-      expanded ? Infinity : settings.maxVisible,
-      hasWaiting ? withWaiting : fitIn(forItems),
-    );
-    const all = busy > capacity ? buildEntries(activity, settings, true) : separate;
-    // Expanded, everything that fits is shown, past the usual limit
-    const wanted = expanded ? all.length : Math.min(all.length, settings.maxVisible);
-    // Short of room, the avatars come first: the waiting pill appears on expanding
-    const waitingFits = hasWaiting && (expanded || withWaiting >= wanted);
-    const fit = Math.min(wanted, waitingFits ? withWaiting : fitIn(forItems));
-    return { entries: limitEntries(all, fit, activity.total), showWaiting: waitingFits };
-  }, [activity, settings, room, expanded, hasWaiting, showMore, anchor.size]);
+
+    const layout = (room: number, spread: boolean, reserveMore: boolean) => {
+      const forItems = room - (reserveMore ? 1.5 * rem : 0);
+      const withWaiting = fitIn(forItems - 5.5 * rem);
+      const capacity = Math.min(
+        spread ? Infinity : settings.maxVisible,
+        hasWaiting ? withWaiting : fitIn(forItems),
+      );
+      const all = busy > capacity ? buildEntries(activity, settings, true) : separate;
+      // Spread out, everything that fits is shown, past the usual limit
+      const wanted = spread ? all.length : Math.min(all.length, settings.maxVisible);
+      // Short of room, the avatars come first: the waiting pill appears on expanding
+      const waitingFits = hasWaiting && (spread || withWaiting >= wanted);
+      const fit = Math.min(wanted, waitingFits ? withWaiting : fitIn(forItems));
+      return {
+        entries: limitEntries(all, fit, activity.total),
+        showWaiting: waitingFits,
+        // Something going on is out of sight: a reason to expand
+        holdsBack: busy > capacity || (hasWaiting && !waitingFits),
+      };
+    };
+
+    // The options button is small enough to sit past the room kept for the items,
+    // so revealing it at rest moves nothing
+    const rest = layout(anchor.available, false, hasMore && !canHover());
+    const mayExpand = settings.expandOnHover === 'always'
+      || (settings.expandOnHover === 'activity' && rest.holdsBack);
+    if (engaged && mayExpand) {
+      return {
+        ...layout(anchor.availableExpanded ?? anchor.available, true, hasMore),
+        expanded: true,
+      };
+    }
+    return { ...rest, expanded: false };
+  }, [activity, settings, anchor, engaged, hasWaiting, hasMore]);
+
+  // Expanded in the top bar, the stack may reach the meeting title, which gives way
+  const [coversTitle, setCoversTitle] = React.useState(false);
+  React.useLayoutEffect(() => {
+    const titleRect = expanded && !replacesTitle
+      ? document.querySelector(TITLE_SELECTOR)?.getBoundingClientRect()
+      : undefined;
+    const rect = rootRef.current?.getBoundingClientRect();
+    setCoversTitle(!!titleRect && !!rect
+      && rect.right > titleRect.left - 12 && rect.left < titleRect.right + 12);
+  });
+  const { title, openDetails } = useMeetingTitle(replacesTitle || coversTitle);
+
   // Waiting users are too important to go unnoticed while their pill is held back
   const waitingHint = hasWaiting && !showWaiting;
 

@@ -43,11 +43,11 @@ By default the stack is shown to moderators and the presenter. See [`visibleTo`]
 
 ![Five users clapping, as one item](docs/reactions.png)
 
-**See who else is there.** `+N` stands for the users that did not fit. Its menu names the first of them, 30 at most and only those on the first page of the user list, and closes with a `+X` for the others, so it stays light in a large meeting.
+**See who else is there.** `+N` stands for the users that did not fit. Clicking a name in its menu opens that user's actions. The menu names the first of them, 30 at most and only those on the first page of the user list, and closes with a `+X` for the others, so it stays light in a large meeting.
 
 ![The users that did not fit](docs/more.png)
 
-**Stay small, expand on demand.** At rest the stack keeps to the free room of the bar and to 12 items. With the pointer on it, it expands: the meeting title gives way and everything that fits is shown.
+**Stay small, expand on demand.** At rest the stack keeps to the free room of the bar and to 15 items. When that leaves a raised hand, a reaction or the waiting room out of sight, the pointer on the stack expands it: the meeting title gives way and everything that fits is shown. Users with nothing going on stay in the `+N` menu.
 
 | At rest, with the chat open |
 |---|
@@ -120,7 +120,7 @@ window and docks itself next to the client's nav bar and actions bar, following 
 | `media-left` | Over the content, a vertical stack at the start |
 | `floating` | A window the user drags around |
 
-When a bar has less than 150px free (phones), the stack moves to `media-top-left`.
+When a bar has less than 150px free, the stack moves to `media-top-left`. On phones the stack is off unless `showOnMobile` is set.
 
 ### At rest and expanded
 
@@ -128,9 +128,10 @@ At rest the stack keeps to the free room of its bar: the `⋮` button is not dra
 which have no hover to reveal it) and, when room is short, the waiting pill gives its place to avatars and
 the `+N` item gets a small clock badge instead.
 
-With the pointer on the stack, keyboard focus inside it or one of its menus open, it expands: the waiting
-pill and `⋮` appear, `maxVisible` no longer applies, and in `navbar-left` the stack may spread over the
-meeting title, which is hidden until the pointer leaves.
+With the pointer on the stack, keyboard focus inside it or one of its menus open, `⋮` appears. If the stack
+is holding back something going on (a raised hand, a reaction, the waiting pill), it also expands: the
+waiting pill appears, `maxVisible` no longer applies, and in `navbar-left` the stack may spread over the
+meeting title, which is hidden until the pointer leaves. `expandOnHover` changes when it expands.
 
 In the top bar the stack stays clear of the client's talking indicator, which sits right below: it moves up
 as far as the bar allows and only then shrinks its avatars.
@@ -159,7 +160,9 @@ public:
 | `userCanHide` | `true` | Users can hide the stack from its `⋮` menu and bring it back from the client's options menu |
 | `userCanMove` | `true` | Users can pick their own position from the `⋮` menu |
 | `positions` | all but `media-top-left` | The positions offered to users, as a list or a comma-separated string |
-| `maxVisible` | `12` | Most items shown at rest before the rest collapse into `+N`. Fewer are shown when the bar runs out of room |
+| `expandOnHover` | `activity` | `activity`: expands only when a raised hand, a reaction or the waiting pill is out of sight. `always`: expands to every user that fits. `never` |
+| `showOnMobile` | `false` | Shows the stack on phones (windows up to 640px wide) too |
+| `maxVisible` | `15` | Most items shown at rest before the rest collapse into `+N`. Fewer are shown when the bar runs out of room |
 | `showIdleUsers` | `true` | Fills the remaining room with the users that have no hand raised and no reaction. `false` shows activity only |
 | `groupReactionsFrom` | `3` | Users with the same reaction needed to group them, when there is no room to show them one by one |
 | `showPresenter` | `true` | |

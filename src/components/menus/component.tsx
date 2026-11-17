@@ -4,6 +4,7 @@ import { messages } from '../../commons/intl';
 import { ActivityUser, Viewer, WaitingUser } from '../../commons/types';
 import {
   AllowAllIcon,
+  BackIcon,
   CheckIcon,
   CloseIcon,
   HandOffIcon,
@@ -18,6 +19,7 @@ import { Avatar, StatusBadge } from '../avatar/component';
 import {
   MenuAction,
   MenuFooter,
+  BackButton,
   MenuList,
   MoreUsers,
   PopoverHeader,
@@ -154,6 +156,22 @@ export function UserListMenu({
   const mod = viewer.isModerator;
   const listed = users.slice(0, MAX_LISTED);
   const notListed = more + users.length - listed.length;
+  // A row opens the same menu the user's avatar would, in place of the list
+  const [selectedId, setSelectedId] = React.useState<string | null>(null);
+  const selected = users.find((user) => user.userId === selectedId);
+
+  if (selected) {
+    return (
+      <>
+        <BackButton type="button" onClick={() => setSelectedId(null)} aria-label={String(title)}>
+          <BackIcon />
+          <span>{title}</span>
+        </BackButton>
+        <UserMenu user={selected} viewer={viewer} intl={intl} actions={actions} onDone={onDone} />
+      </>
+    );
+  }
+
   return (
     <>
       <PopoverHeader>
@@ -166,7 +184,9 @@ export function UserListMenu({
               <Avatar user={user} small />
               <StatusBadge user={user} single />
             </UserRowAvatar>
-            <UserRowName>{user.name}</UserRowName>
+            <UserRowName as="button" type="button" onClick={() => setSelectedId(user.userId)}>
+              {user.name}
+            </UserRowName>
             {user.raiseHand && (mod || user.userId === viewer.userId) && (
               <RowButton
                 type="button"

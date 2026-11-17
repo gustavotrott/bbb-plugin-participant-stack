@@ -6,6 +6,7 @@ import {
 import { messages, useGetInternationalization } from '../commons/intl';
 import { applyPreferences, setPreferences, usePreferences } from '../commons/preferences';
 import { canSee, useSettings } from '../commons/settings';
+import { useMediaQuery } from '../hooks/use-media-query';
 import Stack from '../components/stack/component';
 
 interface MainComponentProps {
@@ -27,7 +28,10 @@ function MainComponent({ pluginUuid: uuid }: MainComponentProps): React.ReactEle
     isModerator: currentUser.role === 'MODERATOR',
     presenter: currentUser.presenter,
   });
-  const shown = allowed && !hidden;
+  // Same width at which the stack would give up the bars (see use-anchor)
+  const mobile = useMediaQuery('(max-width: 640px)');
+  const available = allowed && (settings.showOnMobile || !mobile);
+  const shown = available && !hidden;
 
   // Nothing is mounted, and nothing is subscribed to, for who does not see the stack
   React.useEffect(() => {
@@ -71,7 +75,7 @@ function MainComponent({ pluginUuid: uuid }: MainComponentProps): React.ReactEle
 
   // The way back after hiding the stack: an entry in the client's options menu
   React.useEffect(() => {
-    if (!allowed || !settings.userCanHide || !intl) {
+    if (!available || !settings.userCanHide || !intl) {
       pluginApi.setOptionsDropdownItems([]);
       return;
     }
@@ -83,7 +87,7 @@ function MainComponent({ pluginUuid: uuid }: MainComponentProps): React.ReactEle
         onClick: () => setPreferences({ hidden: !hidden }),
       }),
     ]);
-  }, [pluginApi, allowed, hidden, intl, settings.userCanHide]);
+  }, [pluginApi, available, hidden, intl, settings.userCanHide]);
 
   return null;
 }

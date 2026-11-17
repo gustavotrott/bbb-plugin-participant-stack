@@ -15,6 +15,9 @@ export type Position = typeof POSITIONS[number];
 export const VISIBLE_TO = ['all', 'moderators', 'presenter', 'moderators-and-presenter'] as const;
 export type VisibleTo = typeof VISIBLE_TO[number];
 
+export const EXPAND_ON_HOVER = ['activity', 'always', 'never'] as const;
+export type ExpandOnHover = typeof EXPAND_ON_HOVER[number];
+
 export const DESIGNS = ['overlap', 'spaced', 'summary'] as const;
 export type Design = typeof DESIGNS[number];
 
@@ -33,6 +36,13 @@ export interface Settings {
   // collapse into "+N". Fewer are shown when the bar runs out of room, and all that
   // fit while the pointer is on the stack.
   maxVisible: number;
+  // What the pointer on the stack does. 'activity': expands only when something
+  // going on is out of sight (a hand, a reaction, waiting users); the users with
+  // nothing going on stay in the "+N" menu. 'always': shows every user that fits.
+  // 'never': the stack keeps its size.
+  expandOnHover: ExpandOnHover;
+  // Phones have no room in the bars and no hover; off by default there
+  showOnMobile: boolean;
   // From this many users with the same reaction on, they become one "N x emoji" item
   groupReactionsFrom: number;
   showPresenter: boolean;
@@ -54,7 +64,9 @@ export const DEFAULT_SETTINGS: Settings = {
   positionWithPanelOpen: undefined,
   hideWhenUserListOpen: true,
   design: 'overlap',
-  maxVisible: 12,
+  maxVisible: 15,
+  expandOnHover: 'activity',
+  showOnMobile: false,
   groupReactionsFrom: 3,
   showPresenter: true,
   showIdleUsers: true,
@@ -118,6 +130,8 @@ export const parseSettings = (raw: Record<string, unknown>): Settings => ({
   hideWhenUserListOpen: bool(raw.hideWhenUserListOpen, DEFAULT_SETTINGS.hideWhenUserListOpen),
   design: oneOf(raw.design, DESIGNS, DEFAULT_SETTINGS.design),
   maxVisible: positiveInt(raw.maxVisible, DEFAULT_SETTINGS.maxVisible),
+  expandOnHover: oneOf(raw.expandOnHover, EXPAND_ON_HOVER, DEFAULT_SETTINGS.expandOnHover),
+  showOnMobile: bool(raw.showOnMobile, DEFAULT_SETTINGS.showOnMobile),
   groupReactionsFrom: positiveInt(raw.groupReactionsFrom, DEFAULT_SETTINGS.groupReactionsFrom),
   showPresenter: bool(raw.showPresenter, DEFAULT_SETTINGS.showPresenter),
   showIdleUsers: bool(raw.showIdleUsers, DEFAULT_SETTINGS.showIdleUsers),

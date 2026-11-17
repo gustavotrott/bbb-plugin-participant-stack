@@ -83,6 +83,8 @@ export const InfoIcon = icon(
   </>,
 );
 
+export const BackIcon = icon(<path d="M15 5l-7 7 7 7" />);
+
 export const CheckIcon = icon(<path d="M5 12.500l4.500 4.500L19 7.500" />);
 
 export const CloseIcon = icon(<path d="M6 6l12 12M18 6L6 18" />);

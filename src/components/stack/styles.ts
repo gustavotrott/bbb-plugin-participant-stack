@@ -549,10 +549,44 @@ export const UserRowAvatar = styled.span`
   }
 `;
 
+// Back from a user's menu to the list it was opened from
+export const BackButton = styled.button`
+  ${resetButton}
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  width: 100%;
+  padding: 0.375rem 0.75rem 0.25rem;
+  color: var(--pav-text-muted);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-align: start;
+
+  &:hover {
+    color: var(--pav-text);
+  }
+`;
+
 export const UserRowName = styled.span`
+  appearance: none;
+  margin: 0;
+  padding: 0.375rem 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: start;
   flex: 1;
   min-width: 0;
   font-weight: 600;
+
+  button& {
+    cursor: pointer;
+  }
+
+  button&:hover {
+    color: var(--pav-primary);
+  }
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
