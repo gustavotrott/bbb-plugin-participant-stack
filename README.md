@@ -126,7 +126,7 @@ When a bar has less than 150px free, the stack moves to `media-top-left`. On pho
 
 At rest the stack keeps to the free room of its bar: the `⋮` button is not drawn (except on touch screens,
 which have no hover to reveal it) and, when room is short, the waiting pill gives its place to avatars and
-the `+N` item gets a small clock badge instead.
+the counter gets a small clock badge instead.
 
 With the pointer on the stack, keyboard focus inside it or one of its menus open, `⋮` appears. If the stack
 is holding back something going on (a raised hand, a reaction, the waiting pill), it also expands: the
@@ -163,7 +163,7 @@ public:
 | `expandOnHover` | `activity` | `activity`: expands only when a raised hand, a reaction or the waiting pill is out of sight. `always`: expands to every user that fits. `never` |
 | `showOnMobile` | `false` | Shows the stack on phones (windows up to 640px wide) too |
 | `counter` | `total` | The last item. `total`: the number of users in the meeting, opening the list of everyone. `hidden`: `+N`, the users that did not fit |
-| `maxVisible` | `15` | Most items shown at rest before the rest collapse into `+N`. Fewer are shown when the bar runs out of room |
+| `maxVisible` | `15` | Most items shown at rest, counter included. Fewer are shown when the bar runs out of room |
 | `showIdleUsers` | `true` | Fills the remaining room with the users that have no hand raised and no reaction. `false` shows activity only |
 | `groupReactionsFrom` | `3` | Users with the same reaction needed to group them, when there is no room to show them one by one |
 | `showPresenter` | `true` | |
@@ -192,7 +192,7 @@ What the plugin asks the server for was chosen to add as little load as possible
 | Data | Source | Extra per client |
 |---|---|---|
 | Presenter and users with nothing going on | The first page of the client's user list (`Patched_UserListSubscription`, same text and variables as the client) | One query limited to the page size (50 by default). None while the client's own user list is open |
-| Number of users, for `+N` | The client's `UsersCount` | None: the client always has it open |
+| Number of users, for the counter | The client's `UsersCount` | None: the client always has it open |
 | Raised hands | The client's `RaisedHandUsers` | None |
 | Waiting users (moderators only) | The client's `getGuestWaitingUsers` | None |
 | Reactions | A stream (`UserReactions`, same text as `bbb-plugin-reaction-stack`), starting 15 seconds back | One stream; each reaction is sent once |
@@ -204,7 +204,7 @@ work, but stop being shared.
 
 Consequences worth knowing:
 
-- Users beyond the first page are known only by their number, unless they raise a hand or react. The `+N`
+- Users beyond the first page are known only by their number, unless they raise a hand or react. The counter's
   menu lists up to 50 of the ones it knows and closes with the count of the others.
 - A reaction made more than 15 seconds before a user joined is not shown to that user.
 - Nothing is subscribed to for users who do not see the stack (`visibleTo`, or hidden by the user).
